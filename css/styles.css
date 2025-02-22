@@ -12,12 +12,27 @@ header {
     align-items: center;
     border-bottom: 1px solid #ddd;
 }
-.nav-buttons button {
-    margin-left: 10px;
-    padding: 10px;
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 20px;
+}
+.navbar button {
+    padding: 10px 20px;
     border: 1px solid #ccc;
     background: white;
     cursor: pointer;
+    border-right: none;
+}
+.navbar button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.navbar button:last-child {
+    border-right: 1px solid #ccc;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 main {
     text-align: center;
