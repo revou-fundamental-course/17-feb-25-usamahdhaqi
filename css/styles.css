@@ -12,6 +12,9 @@ header {
     align-items: center;
     border-bottom: 1px solid #ddd;
 }
+.logo {
+    width: 10%;
+}
 .navbar {
     display: flex;
     justify-content: flex-end;
@@ -35,8 +38,10 @@ header {
     border-bottom-right-radius: 5px;
 }
 main {
-    text-align: center;
     padding: 50px 20px;
+}
+h1, p {
+    text-align: center;
 }
 .content {
     display: flex;
@@ -47,22 +52,53 @@ main {
     margin: auto;
 }
 .image-placeholder {
-    width: 50%;
+    width: 65%;
     text-align: center;
 }
+img {
+    border-radius: 5px;
+}
+.testimonial {
+    display: flex;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ccc;
+    display: block;
+    margin: 10px;
+}
+.profile-name {
+    text-align: left;
+}
+.info {
+    text-align: left;
+}
 .contact-form {
-    width: 40%;
+    width: 35%;
     padding: 20px;
-    border: 1px solid #ddd;
     border-radius: 5px;
     background: #f8f8f8;
 }
 .contact-form input, .contact-form select, .contact-form button {
     width: 100%;
+    padding: 12px;
     margin-bottom: 10px;
-    padding: 10px;
+    display: block;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.contact-form button {
+    background: black;
+    color: white;
+    cursor: pointer;
 }
 .package-section {
     background: #f3f3f3;

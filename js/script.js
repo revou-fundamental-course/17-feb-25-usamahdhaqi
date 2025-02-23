@@ -1,7 +1,18 @@
-for (let i = 1; i <= 10; i++) {
-    if (i % 2 === 0) {
-        console.log(i + " adalah bilangan genap.");
-    } else {
-        console.log(i + " adalah bilangan ganjil.");
+document.addEventListener("DOMContentLoaded", function () {
+    let slides = document.querySelectorAll(".image-slide");
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = (i === index) ? "block" : "none";
+        });
     }
-}
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    showSlide(currentSlide);
+    setInterval(nextSlide, 3000);
+});
