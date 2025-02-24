@@ -1,18 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     let slides = document.querySelectorAll(".image-slide");
-    let currentSlide = 0;
+    let currentIndex = 0;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.display = (i === index) ? "block" : "none";
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides.forEach((slide, index) => {
+            slide.style.transform = `translateX(-${currentIndex * 100}%)`;
         });
     }
 
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    showSlide(currentSlide);
-    setInterval(nextSlide, 3000);
+    setInterval(nextSlide, 3000); // Geser otomatis setiap 3 detik
 });
