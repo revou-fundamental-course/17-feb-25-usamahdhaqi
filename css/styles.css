@@ -1,3 +1,55 @@
+/* Untuk Tablet (≤ 768px) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-placeholder,
+    .contact-form {
+        width: 90%;
+    }
+
+    .package {
+        width: 45%; 
+    }
+}
+
+/* Untuk Smartphone (≤ 480px) */
+@media screen and (max-width: 480px) {
+    .navbar button {
+        width: 100%; 
+        margin: 5px 0;
+    }
+
+    .content {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .image-placeholder,
+    .contact-form {
+        width: 100%;
+    }
+
+    .package {
+        width: 100%;
+    }
+
+    .hero-section h1 {
+        font-size: 20px;
+    }
+
+    .hero-section p {
+        font-size: 14px;
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -157,6 +209,7 @@ label {
     background-position: center;
     position: relative;
     overflow: hidden;
+    background-repeat: no-repeat;
 }
 .package::before {
     content: "";
@@ -165,7 +218,27 @@ label {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background-image: inherit; 
+    background-size: cover;
+    background-position: center;
+    transition: transform 1s ease-in-out; 
+    transform: scale(1);
+}
+.package:hover::before {
+    transform: scale(1.2);
+}
+.package::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.240);
+    transition: opacity 0.5s ease-in-out;
+}
+.package:hover::after {
+    opacity: 0.5;
 }
 .package h4, .package p {
     text-align: left;
@@ -175,8 +248,8 @@ label {
     z-index: 2;
 }
 footer {
+    padding: 50px 20px 70px 20px;
     text-align: center;
-    padding: 20px;
     background: #eee;
 }
 .cta-button {
@@ -187,4 +260,19 @@ footer {
     text-decoration: none;
     margin-top: 20px;
     border-radius: 5px;
+}
+.copyright {
+    background-color: rgb(0, 1, 20);
+    color: #d3d3d3;
+}
+.copyright p {
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.copyright p:first-child {
+    padding-top: 16px;
+}
+.copyright p:last-child {
+    padding-bottom: 16px;
 }
