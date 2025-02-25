@@ -83,7 +83,7 @@ img {
     border-radius: 50%;
     background: #ccc;
     display: block;
-    margin: 10px;
+    margin: 10px 20px;
     overflow: hidden;
 }
 .profile-image img {
@@ -121,8 +121,8 @@ label {
     margin-top: 6px;
     margin-bottom: 15px;
     display: block;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 3px solid #d3d3d3;
+    border-radius: 7px;
     font-size: 16px;
     box-sizing: border-box;
 }
@@ -149,11 +149,30 @@ label {
 .package {
     width: 30%;
     padding: 20px;
-    margin: 10px;
-    background: white;
+    margin: 17px;
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.package::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+.package h4, .package p {
+    text-align: left;
+    margin-left: 25px;
+    margin-right: 20px;
+    position: relative;
+    z-index: 2;
 }
 footer {
     text-align: center;
