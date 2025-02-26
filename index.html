@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="css\styles.css">
 </head>
 <body>
-    <header>
-        <div>
-            <img class="logo" src="assets\logo-mini-project-RevoU.png">
+    <header style="background-image: url('assets/gambar-langit.jpg');">
+        <div class="logo-space">
+            <img class="logo-image" src="assets\logo-mini-project-RevoU.png">
         </div>
         <nav class="navbar">
-            <button>Home</button>
-            <button>Our Package</button>
-            <button>Call Us</button>
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#our-package" class="nav-link">Our Package</a>
+            <a href="#contact-us" class="nav-link">Call Us</a>
         </nav>
     </header>
 
-    <main>
+    <main id="home">
         <h1>Your Trusted Travel Agent's</h1>
         <p>Your happiness is our happiness</p>
         
@@ -59,15 +59,20 @@
                 </div>
             </div>
 
-            <div class="contact-form">
+            <div id="contact" class="contact-form">
                 <h4>Contact Us</h4>
                 <p>Sales akan menghubungi anda 1x24 Jam setelah data kami terima.</p>
+
                 <label><b>Your Name:</b></label>
-                <input type="text" placeholder="First and last name">
+                <input type="text" id="name" placeholder="First and last name">
+                <span id="error-name" class="error-message"></span>
+                
                 <label><b>Email Address</b></label>
-                <input type="email" placeholder="example@email.com">
+                <input type="email" id="email" placeholder="example@email.com">
+                <span id="error-email" class="error-message"></span>
+
                 <label><b>What are you interested in?</b></label>
-                <select>
+                <select id="destination">
                     <option value="">Select option</option>
                     <option value="bali">Bali</option>
                     <option value="japan">Jepang</option>
@@ -75,13 +80,15 @@
                     <option value="bandung">Bandung</option>
                     <option value="surabaya">Surabaya</option>
                 </select>
-                <button>SEND</button>
+                <span id="error-destination" class="error-message"></span>
+
+                <button id="send-btn"><b>SEND</b></button>
             </div>
 
         </div>
     </main>
 
-    <section class="package-section">
+    <section id="our-package" class="package-section">
         <h2>Our Package</h2>
         <div class="package-list">
             <div class="package" style="background-image: url('assets/gambar-bali.jpg');">
@@ -115,15 +122,17 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="contact-us">
         <h2>Wujudkan Liburan Impian Anda Bersama Kami!</h2>
         <p>Apakah Anda mencari petualangan seru, liburan romantis, atau perjalanan santai yang penuh kenangan?<br>
             Kami ada untuk mewujudkan impian perjalanan Anda!</p>
-        <a href="#" class="cta-button"><b>CALL TO ACTION</b></a>
+        <a href="#contact" class="cta-button"><b>CALL TO ACTION</b></a>
     </footer>
 
     <div class="copyright">
-        <p>usamahdhaqi</p>
+        <div class="copyright-logo">
+            <img src="assets\logo-mini-project-RevoU.png">
+        </div>
         <p>Terms of Service | Privacy Policy</p>
         <p>&copy; 2025 Usamahdhaqi</p>
     </div>
