@@ -121,6 +121,9 @@ img {
     padding: 50px;
     border-radius: 5px;
     background: #f8f8f8;
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 .contact-form h4 {
     font-size: 20px; 
@@ -181,6 +184,7 @@ label {
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     color: white;
+    cursor: pointer;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -256,6 +260,12 @@ footer {
     font-size: 12px;
     margin-top: 0px;
     margin-bottom: 0px;
+}
+.copyright a {
+    color: #d3d3d3;
+}
+.copyright a:hover {
+    color: rgb(77, 133, 255);
 }
 .copyright p:first-child {
     padding-top: 16px;
