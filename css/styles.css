@@ -16,12 +16,16 @@ body {
     box-sizing: border-box;
 }
 header {
-    padding: 5px 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #ddd;
     background-size: cover;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 .logo-space {
     display: flex;
@@ -29,7 +33,7 @@ header {
     padding: 15px 20px;
 }
 .logo-image {
-    width: 45%;
+    width: 25%;
 }
 .navbar {
     display: flex;
@@ -58,6 +62,9 @@ header {
     border-right: 1px solid #ccc;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+body {
+    padding-top: 50px;
 }
 main {
     padding: 50px 20px;
